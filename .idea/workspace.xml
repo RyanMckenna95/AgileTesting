@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af4f225c-6c3c-4f5b-8b00-e51bbad3171d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2019-10-27T054210.200.json" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/2019-10-27T054210.200.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +29,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.16.3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../donationweb-3.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../agile/donationsAPIWithTests" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
@@ -1343,7 +1340,7 @@
       <workItem from="1570524448632" duration="2678000" />
       <workItem from="1570539318312" duration="706000" />
       <workItem from="1571732563218" duration="6613000" />
-      <workItem from="1571932513933" duration="44725000" />
+      <workItem from="1571932513933" duration="53112000" />
     </task>
     <servers />
   </component>
