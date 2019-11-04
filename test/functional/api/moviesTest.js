@@ -87,4 +87,40 @@ describe('Movies', ()=> {
                 });
         });
     });
+
+    describe("GET /movie/id", () => {
+        describe("when the id is valid", () => {
+            it("should return the matching movie ID", done => {
+                request(server)
+                    .get(`/movie/${validID}`)
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .end((err,res)=> {
+                        expect(res.body[0]).to.have.property("title", "Avatar");
+                        expect(res.body[0]).to.have.property("released", "2012");
+                        expect(res.body[0]).to.have.property("cost", 24);
+                        expect(res.body[0]).to.have.property("stock", 133);
+                        done(err);
+                    });
+            });
+        });
+        describe("when the id is invalid", () => {
+            it("should return the not found message", done => {
+                request(server)
+                    .get("/movie/9919191")
+                    .set("Accept", "application/json")
+                    .expect("Content-type", /json/)
+                    .expect(200)
+                    .end((err,res)=> {
+                        expect(res.body.message).equals('Movie not found');
+                        done(err);
+                    });
+            });
+        });
+    });
+
+   // describe("POST /movie", () => {
+        //it
+    //});
 });
