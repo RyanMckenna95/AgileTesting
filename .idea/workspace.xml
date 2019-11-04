@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af4f225c-6c3c-4f5b-8b00-e51bbad3171d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/movie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/functional/api/moviesTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/functional/api/moviesTest.js" afterDir="false" />
-    </list>
+    <list default="true" id="af4f225c-6c3c-4f5b-8b00-e51bbad3171d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1343,7 +1338,7 @@
       <workItem from="1570524448632" duration="2678000" />
       <workItem from="1570539318312" duration="706000" />
       <workItem from="1571732563218" duration="6613000" />
-      <workItem from="1571932513933" duration="84790000" />
+      <workItem from="1571932513933" duration="85624000" />
     </task>
     <servers />
   </component>

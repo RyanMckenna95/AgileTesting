@@ -91,6 +91,10 @@ describe('Movies', ()=> {
                         expect(res.body[1]).to.have.property("released", "2013");
                         expect(res.body[1]).to.have.property("cost", 12);
                         expect(res.body[1]).to.have.property("stock", 1765);
+                        expect(res.body[2]).to.have.property("title", "Green book");
+                        expect(res.body[2]).to.have.property("released", "2018");
+                        expect(res.body[2]).to.have.property("cost", 10);
+                        expect(res.body[2]).to.have.property("stock", 0);
                         done();
                     } catch (e) {
                         done(e);
