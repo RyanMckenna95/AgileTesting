@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="af4f225c-6c3c-4f5b-8b00-e51bbad3171d" name="Default Changelist" comment="" />
+    <list default="true" id="af4f225c-6c3c-4f5b-8b00-e51bbad3171d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1338,7 +1340,7 @@
       <workItem from="1570524448632" duration="2678000" />
       <workItem from="1570539318312" duration="706000" />
       <workItem from="1571732563218" duration="6613000" />
-      <workItem from="1571932513933" duration="85624000" />
+      <workItem from="1571932513933" duration="88424000" />
     </task>
     <servers />
   </component>
@@ -1357,16 +1359,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/models/shows.js</url>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
