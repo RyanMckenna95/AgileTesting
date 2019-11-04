@@ -109,4 +109,37 @@ describe('Shows', ()=> {
         });
     });
 
+    describe("GET /show/id", () => {
+        describe("when the id is valid", () => {
+            it("should return the matching show ID", done => {
+                request(server)
+                    .get(`/show/${validID}`)
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .end((err, res) => {
+                        expect(res.body[0]).to.have.property("title", "House");
+                        expect(res.body[0]).to.have.property("season", 3);
+                        expect(res.body[0]).to.have.property("released", "2005");
+                        expect(res.body[0]).to.have.property("cost", 24);
+                        expect(res.body[0]).to.have.property("stock", 100);
+                        done(err);
+                    });
+            });
+        });
+        describe("when the id is invalid", () => {
+            it("should return the not found message", done => {
+                request(server)
+                    .get("/show/9919191")
+                    .set("Accept", "application/json")
+                    .expect("Content-type", /json/)
+                    .expect(200)
+                    .end((err, res) => {
+                        expect(res.body.message).equals('show not found');
+                        done(err);
+                    });
+            });
+        });
+    });
+
 });
