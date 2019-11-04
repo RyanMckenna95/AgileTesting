@@ -61,22 +61,26 @@ router.addShow = (req, res) => {
 
 router.purchaseShow = (req, res) => {
 
-    Show.findById(req.params.id,function (err,show) {
-        if(err)
-            res.json({message:'Show not found',errmsg:err});
-        else
-            if (show.stock == 0){
-                res.send('This show is out of stock')
-            }else
-                show.stock -=1;
-                show.save(function (err){
+    let stock;
 
-                    if(err)
-                        res.json({message:'unable to add to checkout', errmsg});
-                    else
-                        res.json({message:'added to basket',data:show});
-                });
+    Show.findById({"_id": req.params.id},function (err,show) {
+        if (err)
+            res.json({message: "show not found"});
+        else {
 
+            stock = show.stock;
+            if (stock = 0) {
+                res.json({message: 'this Show is out of stock', errmsg: err});
+            } else
+                show.stock -= 1;
+            show.save(function (err) {
+
+                if (err)
+                    res.json({message: 'unable to add to checkout', errmsg: err});
+                else
+                    res.json({message: 'added to basket', data: show});
+            });
+        }
     });
 
 }

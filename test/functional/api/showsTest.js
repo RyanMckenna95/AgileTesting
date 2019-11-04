@@ -174,4 +174,43 @@ describe('Shows', ()=> {
         });
     });
 
+    describe("PUT /show/:id/purchase", () => {
+        describe("when the id is valid", () => {
+            it("it should return the message and should reduce the stock by 1", () => {
+                return request(server)
+                    .put(`/show/${validID}/purchase`)
+                    .expect(200)
+                    .then(resp => {
+                        expect(resp.body).to.include({message: "added to basket"});
+                        expect(resp.body.data).to.have.property("stock", 99);
+
+                    });
+            });
+
+            after(() => {
+                return request(server)
+                    .get(`/show/${validID}`)
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .then(resp => {
+                        expect(resp.body[0]).to.have.property("stock", 99);
+                    });
+            });
+        });
+        describe("when the id is invalid", () => {
+            it("should return an error message", done => {
+                request(server)
+                    .get(`/show/999999`)
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .end((err, res) => {
+                        expect(res.body.message).to.equal("show not found");
+                        done(err);
+                    });
+            });
+        });
+    });
+
 });
