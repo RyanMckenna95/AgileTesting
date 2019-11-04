@@ -86,17 +86,27 @@ router.purchaseShow = (req, res) => {
 }
 
 router.deleteShow = (req, res) => {
-    Show.findById(req.params.id).then(function(){
-        if(req.params.stock == 0){
-            Show.findByIdAndRemove(req.params.id, function (err) {
-                if(err)
-                    res.json({message:'Show not deleted',errmsg:err});
-                else
-                    res.json({message:'Show deleted Successfully'})
-            })
-        }else
-            res.send('must be out of stock to delete');
+    let stock;
+
+
+
+    Show.findById({"_id": req.params.id}, function (err, show) {
+        if (err)
+            res.json({message: "show not found"});
+        else {
+            stock = show.stock;
+            if(stock = 0){
+                res.send('must be out of stock to delete');
+            }else
+                Show.findByIdAndRemove(req.params.id, function (err) {
+                    if(err)
+                        res.json({message:'Show not deleted',errmsg:err});
+                    else
+                        res.json({message:"show deleted Successfully"})
+                })
+        }
+
     });
-}
+};
 
 module.exports=router;

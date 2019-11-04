@@ -35,7 +35,7 @@ app.get('/show',show.findAllShows);
 app.get('/show/:id',show.findOneByID);
 app.post('/show', show.addShow);
 app.put('/show/:id/purchase', show.purchaseShow);
-app.delete('/show/:id/:stock', show.deleteShow);
+app.delete('/show/:id', show.deleteShow);
 
 app.get('/review',review.findAllReviews);
 app.get('/review/:id',review.findOneByID);
