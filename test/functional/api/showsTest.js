@@ -142,4 +142,36 @@ describe('Shows', ()=> {
         });
     });
 
+    describe("POST /show", () => {
+        it("should return conformation message and update the datastore", () => {
+            const movie = {
+                title: "Vinland",
+                season: 1,
+                released: "2019",
+                cost: 19,
+                stock: 1221
+            };
+            return request(server)
+                .post("/show")
+                .send(movie)
+                .expect(200)
+                .then(res => {
+                    expect(res.body.message).equals("show added successfully");
+                    validID = res.body.data._id;
+                });
+        });
+        after(() => {
+            return request(server)
+                .get(`/show/${validID}`)
+                .expect(200)
+                .then(res => {
+                    expect(res.body[0]).to.have.property("title", "Vinland");
+                    expect(res.body[0]).to.have.property("season", 1)
+                    expect(res.body[0]).to.have.property("released", "2019");
+                    expect(res.body[0]).to.have.property("cost", 19);
+                    expect(res.body[0]).to.have.property("stock", 1221);
+                });
+        });
+    });
+
 });
