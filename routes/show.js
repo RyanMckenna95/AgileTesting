@@ -4,9 +4,10 @@ let router = express.Router();
 let mongoose = require('mongoose');
 var Show = require('../models/shows')
 
-var mongodbUri = 'mongodb+srv://moviedb:movielover123@movielovers-lm3w3.mongodb.net/test?retryWrites=true&w=majority'
+//var mongodbUri = 'mongodb+srv://moviedb:movielover123@movielovers-lm3w3.mongodb.net/test?retryWrites=true&w=majority'
 //mongoose.connect('mongodb://localhost:27017/movieLoverdbs');
-mongoose.connect(mongodbUri);
+const connectionString= "mongodb://localhost:27017/movieLoverdbs";
+mongoose.connect(connectionString);
 
 router.findAllShows =(req, res) => {
 
