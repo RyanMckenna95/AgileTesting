@@ -120,7 +120,33 @@ describe('Movies', ()=> {
         });
     });
 
-   // describe("POST /movie", () => {
-        //it
-    //});
+    describe("POST /movie", () => {
+        it("should return conformation message and update the datastore", () => {
+            const movie ={
+                title: "Shrek",
+                released: "2003",
+                cost: 10,
+                stock: 111
+            };
+            return request(server)
+                .post("/movie")
+                .send(movie)
+                .expect(200)
+                .then(res => {
+                    expect(res.body.message).equals("Movie added");
+                    validID = res.body.data._id;
+                });
+        });
+        after(() => {
+            return request(server)
+                .get(`/movie/${validID}`)
+                .expect(200)
+                .then(res => {
+                    expect(res.body[0]).to.have.property("title","Shrek");
+                    expect(res.body[0]).to.have.property("released", "2003");
+                    expect(res.body[0]).to.have.property("cost", 10);
+                    expect(res.body[0]).to.have.property("stock", 111);
+                });
+        });
+    });
 });
