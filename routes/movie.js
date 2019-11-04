@@ -72,37 +72,50 @@ router.addMovie = (req, res) => {
 
 router.purchaseMovie = (req, res) => {
 
+    let stock;
 
-    Movie.findById(req.params.id,function (err,movie) {
-        if(err)
-            res.json({message:'Movie not found',errmsg:err});
-        else
-            if(movie.stock == 0){
-                res.send('this Movie is out of stock')
-            }else
-                movie.stock -=1;
-                movie.save(function (err){
+    Movie.findById({"_id": req.params.id},function (err,movie) {
+        if (err)
+            res.json({message: "Movie not found"});
+        else {
 
-                if(err)
-                    res.json({message:'unable to add to checkout', errmsg});
+            stock = movie.stock;
+            if (stock = 0) {
+                res.json({message: 'this Movie is out of stock', errmsg: err});
+            } else
+                movie.stock -= 1;
+                movie.save(function (err) {
+
+                if (err)
+                    res.json({message: 'unable to add to checkout', errmsg: err});
                 else
-                    res.json({message:'added to basket',data:movie});
+                    res.json({message: 'added to basket', data: movie});
             });
-
+        }
     });
 }
 
 router.deleteMovie = (req, res) => {
-    Movie.findById(req.params.id).then(function(){
-        if(req.params.stock == 0){
+    let stock;
+
+
+
+    Movie.findById({"_id": req.params.id}, function (err, movie) {
+        if (err)
+            res.json({message: "Movie not found"});
+        else {
+            stock = movie.stock;
+            if(stock = 0){
+                res.send('must be out of stock to delete');
+            }else
             Movie.findByIdAndRemove(req.params.id, function (err) {
                 if(err)
                     res.json({message:'Movie not deleted',errmsg:err});
                 else
-                    res.json({message:'movie deleted Successfully'})
+                    res.json({message:"movie deleted Successfully"})
             })
-        }else
-            res.send('must be out of stock to delete');
+        }
+
     });
 
 

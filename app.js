@@ -29,7 +29,7 @@ app.get('/movie',movie.findAllMovies);
 app.get('/movie/:id',movie.findOneByID);
 app.post('/movie', movie.addMovie);
 app.put('/movie/:id/purchase', movie.purchaseMovie);
-app.delete('/movie/:id/:stock',movie.deleteMovie);
+app.delete('/movie/:id',movie.deleteMovie);
 
 app.get('/show',show.findAllShows);
 app.get('/show/:id',show.findOneByID);
