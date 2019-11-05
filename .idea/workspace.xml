@@ -13396,7 +13396,6 @@
       <change afterPath="$PROJECT_DIR$/dist/public/stylesheets/style.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dist/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist" beforeDir="false" afterPath="$PROJECT_DIR$/dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/functional/api/reviewsTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/functional/api/reviewsTest.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
