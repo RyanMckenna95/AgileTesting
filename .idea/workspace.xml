@@ -13395,9 +13395,7 @@
       <change afterPath="$PROJECT_DIR$/dist/package.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dist/public/stylesheets/style.css" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/dist/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist" beforeDir="false" afterPath="$PROJECT_DIR$/dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/review.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/review.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/functional/api/reviewsTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/functional/api/reviewsTest.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

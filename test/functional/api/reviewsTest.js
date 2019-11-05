@@ -281,5 +281,59 @@ describe("Reviews", ()=> {
             })
         })
     })
-
+    describe("DELETE /review/:id", () => {
+        describe("when the id is valid", ()=> {
+            it("should DELETE the matching review", done => {
+                request(server)
+                    .delete(`/review/${validID}/`)
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .end((err, res) => {
+                        expect(res.body.message).equals("Review has been deleted")
+                        done(err)
+                    })
+            })
+        })
+        describe("when the id is invalid",  () => {
+            it("should return an error saying invalid", done => {
+                request(server)
+                    .delete("/review/999999/")
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .end((err,res) => {
+                        expect(res.body.message).equals("Review not deleted")
+                        done(err)
+                    })
+            })
+        })
+    })
+    describe("PUT /review/edit/:id", () => {
+        describe("when the id is valid", () => {
+            it("should update the review", done => {
+                const review = {
+                    review: "better"
+                }
+                request(server)
+                    .put(`/review/edit/${validID}`)
+                    .send(review)
+                    .expect(200)
+                    done()
+            })
+        })
+        after(() => {
+            return request(server)
+                .get(`/review/${validID}`)
+                .expect(200)
+                .then(res => {
+                    expect(res.body[0]).to.have.property("author", "Ryan Mckenna")
+                    expect(res.body[0]).to.have.property("titleID", `${movieID}`)
+                    expect(res.body[0]).to.have.property("reviewedTitle", "Avatar")
+                    expect(res.body[0]).to.have.property("review", "better")
+                    expect(res.body[0]).to.have.property("rating", 4)
+                    expect(res.body[0]).to.have.property("likes", 0)
+                })
+        })
+    })
 })
