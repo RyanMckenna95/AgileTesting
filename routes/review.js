@@ -50,7 +50,7 @@ router.addReviewMovie = (req, res) => {
 
     Movie.findOne({'_id': req.params.id}, function (err) {
         if(err)
-            res.json({message: 'movie not found'})
+            res.json({message: 'movie not found', errmsg:err})
         else
             var review = new Review
 
@@ -59,7 +59,7 @@ router.addReviewMovie = (req, res) => {
             review.reviewedTitle= req.body.reviewedTitle;
             review.review= req.body.review;
             review.rating= req.body.rating;
-        review.save(function (err) {
+            review.save(function (err) {
             if(err)
                 res.json({message:'Review not added',errmsg:err});
             else

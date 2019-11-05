@@ -67,6 +67,7 @@ describe("Reviews", ()=> {
             review.rating = 5
             review.likes = 21
             await review.save()
+
             review = new Review()
             review.author = "Ron Bobby"
             review.titleID = "3343"
@@ -199,7 +200,7 @@ describe("Reviews", ()=> {
                         rating: 4
                 }
                 request(server)
-                    .get(`/review/write/${movieID}`)
+                    .post(`/review/write/${movieID}`)
                     .send(review)
                     .expect(200)
                     .then(res => {
@@ -220,6 +221,65 @@ describe("Reviews", ()=> {
                         expect(res.body[0]).to.have.property("likes", 0)
                     })
             })
+            // describe("if the movieID is invalid", () => {
+            //     it("should return an error message", () => {
+            //           const review = {
+            //              author: "Ryan Mckenna",
+            //               titleID: "12322",
+            //                reviewedTitle: "Avatar",
+            //               review: "aged badly",
+            //               rating: 4
+            //           }
+            //         request(server)
+            //             .post("/review/write/11111")
+            //             .send(review)
+            //             .expect(200)
+            //             .then( res => {
+            //                 expect(res.body.message).equals('movie not found')
+            //
+            //             })
+            //     })
+            // })
         })
     })
+
+    describe("PUT /review/:id/like", () => {
+        describe("when the id is valid", () => {
+            it("should add a like to the review", () => {
+                request(server)
+                    .put(`/review/${validID}/like`)
+                    .expect(200)
+                    .then(resp => {
+                        expect(resp.body).to.include({
+                            message: "Review liked"
+                        })
+                        expect(resp.bady.data).to.have.property("likes",2)
+                    })
+            })
+            after(() => {
+                request(server)
+                    .get(`/review/${validID}`)
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expact(200)
+                    .then(resp => {
+                        expect(resp.body[0]).to.have.property("upvotes",2)
+                    })
+            })
+            describe("when the id is invalid", () => {
+                it("should error message saying not found", done => {
+                    request(server)
+                        .put("/review/111111111/like")
+                        .set("Accept", "application/json")
+                        .expect("Content-Type", /json/)
+                        .expect(200)
+                        .end((err, res) => {
+                            expect(res.body.message).to.equal("Review not found")
+                            done(err)
+                        })
+                })
+            })
+        })
+    })
+
 })

@@ -194,7 +194,7 @@ describe("Movies", ()=> {
     describe("when the id is invalid", () => {
       it("should return an error message", done => {
         request(server)
-          .get("/movie/999999")
+          .put("/movie/999999/purchase")
           .set("Accept", "application/json")
           .expect("Content-Type", /json/)
           .expect(200)

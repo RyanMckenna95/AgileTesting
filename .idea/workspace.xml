@@ -13397,16 +13397,8 @@
       <change afterPath="$PROJECT_DIR$/dist/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist" beforeDir="false" afterPath="$PROJECT_DIR$/dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/review.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/review.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/functional/api/moviesTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/functional/api/moviesTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/functional/api/reviewsTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/functional/api/reviewsTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/.babelrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/.mocharc.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/nodemon.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13425,7 +13417,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response387.json" root0="SKIP_INSPECTION" />
+    <setting file="dummy://restClient/response402.json" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1RukcOgqOgPdyLvaPliqlKsHzS9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -13446,6 +13438,56 @@
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
       <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/review/write/11111" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{ &quot;review&quot;: &quot;pretty good&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:3000" />
+          <option name="urlPath" value="/review/11111" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{ &quot;review&quot;: &quot;pretty good&quot;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
         <RestClientRequest>
           <option name="httpMethod" value="GET" />
           <option name="urlBase" value="http://localhost:3000" />
@@ -14669,56 +14711,6 @@
           <option name="parametersEnabled" value="true" />
           <option name="haveTextToSend" value="true" />
           <option name="textToSend" value="{     &quot;author&quot;: &quot;Ryan&quot;,    &quot;reviewedTitle&quot;: &quot;Avengers: End Game&quot;,   &quot;review&quot;: &quot;epic in scale&quot;,   &quot;rating&quot;: 7 }" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="POST" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/review/5db43c2f7f8cff30f7f1e119" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{     &quot;author&quot;: &quot;Ryan&quot;,    &quot;reviewedTitle&quot;: &quot;Avengers: End Game&quot;,   &quot;review&quot;: &quot;epic in scale&quot;,   &quot;rating&quot;: 7 }" />
-          <option name="filesToSend" value="" />
-        </RestClientRequest>
-        <RestClientRequest>
-          <option name="httpMethod" value="GET" />
-          <option name="urlBase" value="http://localhost:3000" />
-          <option name="urlPath" value="/movie" />
-          <option name="headers">
-            <list>
-              <KeyValuePair>
-                <option name="key" value="Accept" />
-                <option name="value" value="*/*" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Cache-Control" />
-                <option name="value" value="no-cache" />
-              </KeyValuePair>
-              <KeyValuePair>
-                <option name="key" value="Content-Type" />
-                <option name="value" value="application/json" />
-              </KeyValuePair>
-            </list>
-          </option>
-          <option name="parametersEnabled" value="true" />
-          <option name="haveTextToSend" value="true" />
-          <option name="textToSend" value="{     &quot;title&quot;: &quot;John Wick&quot;,   &quot;released&quot;: &quot;2015&quot;,   &quot;cost&quot;: 25.00,   &quot;stock&quot;: 1 }" />
           <option name="filesToSend" value="" />
         </RestClientRequest>
       </list>
