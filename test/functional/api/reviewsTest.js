@@ -9,7 +9,7 @@ const after = require("lodash")
 
 let server
 let mongod
-let db, validID
+let db, validID, movieID
 
 describe("Shows", ()=> {
     before(async () => {
@@ -67,6 +67,7 @@ describe("Shows", ()=> {
             await review.save()
             review = await Review.findOne({reviewedTitle: "Avatar"})
             validID = review._id
+            movieID = review.titleID
         } catch (error) {
             console.log(error)
         }
@@ -106,6 +107,40 @@ describe("Shows", ()=> {
                         done(e)
                     }
                 })
+        })
+    })
+
+    describe("GET /review/id", () => {
+        describe("when the id is valid", () => {
+            it("should return the matching review ID", done => {
+                request(server)
+                    .get(`/review/${validID}`)
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(200)
+                    .end((err, res) => {
+                        expect(res.body[0]).to.have.property("author", "Joe Johnson")
+                        expect(res.body[0]).to.have.property("titleID", "1222")
+                        expect(res.body[0]).to.have.property("reviewedTitle", "Avatar")
+                        expect(res.body[0]).to.have.property("review", "mater piece")
+                        expect(res.body[0]).to.have.property("rating", 8)
+                        expect(res.body[0]).to.have.property("likes", 1)
+                        done(err)
+                    })
+            })
+        })
+        describe("when the id is invalid", () => {
+            it("should return the not found message", done => {
+                request(server)
+                    .get("/review/9919191")
+                    .set("Accept", "application/json")
+                    .expect("Content-type", /json/)
+                    .expect(200)
+                    .end((err, res) => {
+                        expect(res.body.message).equals("Review not found")
+                        done(err)
+                    })
+            })
         })
     })
 })

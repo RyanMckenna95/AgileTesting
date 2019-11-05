@@ -34,7 +34,7 @@ router.findOneByID = (req, res) => {
 
     Review.find({"_id":req.params.id},function (err, review) {
         if(err)
-            res.json({message: 'Movie not found', errmsg:err});
+            res.json({message: 'Review not found', errmsg:err});
         else
             res.send(JSON.stringify(review,null,5));
     });
@@ -74,7 +74,7 @@ router.findByAuthor = (req, res)=>{
 
     Review.find({"author":req.params.author},function (err, review) {
         if(err)
-            res.json({message: 'Movie not found', errmsg:err});
+            res.json({message: 'Review not found', errmsg:err});
         else
             res.send(JSON.stringify(review,null,5));
     });
