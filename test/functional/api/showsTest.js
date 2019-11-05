@@ -173,7 +173,49 @@ describe("Shows", ()=> {
         })
     })
   })
+  describe("DELETE /show/:id", () => {
+    describe("when the id is valid and stock is 0", () => {
+      it("should DELETE the matching movie", done => {
+        request(server)
+          .delete(`/show/${validID2}/`)
+          .set("Accept", "application/json")
+          .expect("Content-Type", /json/)
+          .expect(200)
+          .end((err, res) => {
+            expect(res.body.message).equals("show deleted Successfully")
+            done(err)
+          })
 
+      })
+    })
+    describe("when the id is invalid",  () => {
+      it("should return an error saying invalid", done => {
+        request(server)
+          .delete("/show/8888888/")
+          .set("Accept", "application/json")
+          .expect("Content-Type", /json/)
+          .expect(200)
+          .end((err,res) => {
+            expect(res.body.message).equals("show not found")
+            done(err)
+          })
+      })
+    })
+    describe("when the id is valid but there is a stock of more then 0", () => {
+      it("should return an error message", done => {
+        request(server)
+          .delete(`/show/${validID}/`)
+          .set("Accept", "application/json")
+          .expect("Content-Type", /json/)
+          .expect(200)
+          .end((err,res) => {
+            expect(res.body.message).to.equal("must be out of stock to delete")
+            done(err)
+          })
+      })
+    })
+
+  })
   describe("PUT /show/:id/purchase", () => {
     describe("when the id is valid", () => {
       it("it should return the message and should reduce the stock by 1", () => {
@@ -213,46 +255,5 @@ describe("Shows", ()=> {
     })
   })
 
-  describe("DELETE /show/:id", () => {
-    describe("when the id is valid and stock is 0", () => {
-      it("should DELETE the matching movie", done => {
-        request(server)
-          .delete(`/show/${validID2}/`)
-          .set("Accept", "application/json")
-          .expect("Content-Type", /json/)
-          .expect(200)
-          .end((err, res) => {
-            expect(res.body.message).equals("show deleted Successfully")
-            done(err)
-          })
 
-      })
-    })
-    describe("when the id is invalid",  () => {
-      it("should return an error saying invalid", done => {
-        request(server)
-          .delete("/show/999999/")
-          .set("Accept", "application/json")
-          .expect("Content-Type", /json/)
-          .expect(200)
-          .end((err,res) => {
-            expect(res.body.message).equals("show not found")
-            done(err)
-          })
-      })
-    })
-    describe("when the id is valid but there is a stock of more then 0", () => {
-      it("should return an error message", () => {
-        request(server)
-          .delete(`/show/${validID}/`)
-          .set("Accept", "application/json")
-          .expect("Content-Type", /json/)
-          .expect(200)
-          .end((err,res) => {
-            expect(res.body.message).equals("must be out of stock to delete")
-          })
-      })
-    })
-
-  })
 })
