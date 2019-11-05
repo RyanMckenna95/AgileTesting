@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af4f225c-6c3c-4f5b-8b00-e51bbad3171d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/review.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/review.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/show.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/show.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/functional/api/moviesTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/functional/api/moviesTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/functional/api/reviewsTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/functional/api/reviewsTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/functional/api/showsTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/functional/api/showsTest.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
