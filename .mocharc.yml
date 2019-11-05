@@ -1,0 +1,6 @@
+file:
+    - test/functional/api/reviewsTest.js
+require: '@babel/register'
+
+timeout: 8000
+exit: true

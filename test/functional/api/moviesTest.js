@@ -237,6 +237,7 @@ describe("Movies", ()=> {
     })
     describe("when the id is valid but there is a stock of more then 0", () => {
       it("should return an error message", () => {
+        console.log(stock)
         request(server)
           .delete(`/movie/${validID}/`)
           .set("Accept", "application/json")

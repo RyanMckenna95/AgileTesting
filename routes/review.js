@@ -61,7 +61,7 @@ router.addReviewMovie = (req, res) => {
             review.rating= req.body.rating;
         review.save(function (err) {
             if(err)
-                res.json({message:'review not added',errmsg:err});
+                res.json({message:'Review not added',errmsg:err});
             else
                 res.json({message:'review added successfully',data:review});
         });
@@ -73,8 +73,8 @@ router.findByAuthor = (req, res)=>{
     res.setHeader('Content-type','application/json');
 
     Review.find({"author":req.params.author},function (err, review) {
-        if(err)
-            res.json({message: 'Review not found', errmsg:err});
+        if(review.length == 0)
+            res.json({message: 'review not found', errmsg:err});
         else
             res.send(JSON.stringify(review,null,5));
     });

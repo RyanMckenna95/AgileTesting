@@ -3,17 +3,18 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "test": "set NODE_ENV=test && mocha test/functional/api/reviewsTest.js --exit",
+    "test": "cross-env NODE_ENV=test mocha test/functional/api/reviewsTest.js --exit",
     "start": "cross-env NODE_ENV=dev PORT=3001 node dist/bin/www",
     "build": "npm-run-all test clean compile start",
     "compile": "babel ./ --out-dir dist/ --ignore ./node_modules,./test --copy-files",
     "clean": "rimraf ./dist && mkdir dist"
   },
   "dependencies": {
+    "@babel/runtime": "^7.6.3",
+    "babel-preset-es2015": "^6.24.1",
     "bcrypt": "^3.0.6",
     "chai": "^4.2.0",
     "chai-subset": "^1.6.0",
-    "@babel/runtime": "^7.6.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
