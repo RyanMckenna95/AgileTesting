@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "test": "set NODE_ENV=test && mocha test/routes/moviesTest.js",
+    "test": "set NODE_ENV=test && mocha test/functional/api/reviewsTest.js --exit",
     "start": "cross-env NODE_ENV=dev PORT=3001 node dist/bin/www",
     "build": "npm-run-all test clean compile start",
     "compile": "babel ./ --out-dir dist/ --ignore ./node_modules,./test --copy-files",
