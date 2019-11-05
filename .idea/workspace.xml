@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af4f225c-6c3c-4f5b-8b00-e51bbad3171d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist" beforeDir="false" afterPath="$PROJECT_DIR$/dist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/.idea/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dist/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/app.js" afterDir="false" />
@@ -23,6 +22,9 @@
       <change beforePath="$PROJECT_DIR$/dist/node_modules/.bin/NODE_OPTIONS.cmd" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/node_modules/.bin/PORT" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/node_modules/.bin/PORT.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/node_modules/.bin/_mocha" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/node_modules/.bin/_mocha.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/node_modules/.bin/_mocha.ps1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/node_modules/@babel/core/lib/config/config-chain.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/node_modules/@babel/core/lib/config/config-chain.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/node_modules/@babel/core/lib/config/config-descriptors.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/node_modules/@babel/core/lib/config/config-descriptors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/node_modules/@babel/core/lib/config/files/configuration.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/node_modules/@babel/core/lib/config/files/configuration.js" afterDir="false" />
@@ -282,31 +284,6 @@
       <change beforePath="$PROJECT_DIR$/dist/views/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/views/error.ejs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/views/index.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/CHAI_JEST_SNAPSHOT_UPDATE_ALL" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/CHAI_JEST_SNAPSHOT_UPDATE_ALL.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/DEBUG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/DEBUG.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ENV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/ENV.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/NODE_ENV" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/NODE_ENV.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/NODE_OPTIONS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/NODE_OPTIONS.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/PORT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/PORT.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/core/lib/config/config-chain.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/core/lib/config/config-chain.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/core/lib/config/config-descriptors.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/core/lib/config/config-descriptors.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/core/lib/config/files/configuration.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/core/lib/config/files/configuration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/core/lib/config/full.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/core/lib/config/full.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/core/lib/config/validation/option-assertions.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/core/lib/config/validation/option-assertions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/core/lib/config/validation/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/core/lib/config/validation/plugins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/core/lib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/core/lib/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/core/lib/tools/build-external-helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/core/lib/tools/build-external-helpers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/core/lib/transformation/file/file.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/core/lib/transformation/file/file.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/core/lib/transformation/file/generate.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/core/lib/transformation/file/generate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/core/lib/transformation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/core/lib/transformation/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/core/lib/transformation/normalize-file.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/core/lib/transformation/normalize-file.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@babel/core/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@babel/core/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/chai/.npmignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/chai/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/chai/CONTRIBUTING.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/chai/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/chai/LICENSE" afterDir="false" />
@@ -338,11 +315,6 @@
       <change beforePath="$PROJECT_DIR$/node_modules/cliui/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cliui/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/cliui/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cliui/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/cliui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cliui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/code-point-at/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/code-point-at/license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/code-point-at/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/code-point-at/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/cross-env/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/cross-env/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/deep-eql/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/deep-eql/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/deep-eql/deep-eql.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/deep-eql/deep-eql.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/deep-eql/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/deep-eql/index.js" afterDir="false" />
@@ -387,10 +359,6 @@
       <change beforePath="$PROJECT_DIR$/node_modules/mocha/lib/runner.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mocha/lib/runner.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/mocha/mocha.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mocha/mocha.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/mocha/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/mocha/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/number-is-nan/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/number-is-nan/license" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/number-is-nan/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/number-is-nan/readme.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/os-locale/index.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/os-locale/license" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/os-locale/package.json" beforeDir="false" />
@@ -404,19 +372,6 @@
       <change beforePath="$PROJECT_DIR$/node_modules/p-is-promise/license" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/p-is-promise/package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/p-is-promise/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/rimraf/bin.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rimraf/bin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/rimraf/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rimraf/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/rimraf/rimraf.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/rimraf/rimraf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/win-node-env/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/win-node-env/bin/CHAI_JEST_SNAPSHOT_UPDATE_ALL.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/win-node-env/bin/DEBUG.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/win-node-env/bin/ENV.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/win-node-env/bin/NODE_ENV.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/win-node-env/bin/NODE_OPTIONS.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/win-node-env/bin/PORT.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/win-node-env/command-parser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/win-node-env/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/win-node-env/package.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/wrap-ansi/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/wrap-ansi/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/wrap-ansi/license" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/wrap-ansi/license" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/wrap-ansi/node_modules/ansi-regex/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/wrap-ansi/node_modules/ansi-regex/index.js" afterDir="false" />
@@ -516,10 +471,6 @@
       <change beforePath="$PROJECT_DIR$/node_modules/yargs/yargs.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/yargs/yargs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/movie.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/movie.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/functional/api/moviesTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/functional/api/moviesTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/functional/api/showsTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/functional/api/showsTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/views/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
