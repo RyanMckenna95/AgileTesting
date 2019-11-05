@@ -8,6 +8,7 @@ MovieLovers is ment to be a web app to allow the selling of movie and shows. wit
 The reviews can only be left on movies that excist in the database. and both shows and movies can only be 
 deleted if their stock is zero.
 
+### github link : https://github.com/RyanMckenna95/AgileTesting
 ## API endpoints.
 
  . . . . . List the API's endpoints and state the purpose of each . . . . 
