@@ -2,7 +2,8 @@ let movies = require('../models/movies');
 let express = require('express');
 let mongoose = require('mongoose');
 let router = express.Router();
-var Movie= require('../models/movies')
+var Movie= require('../models/movies');
+
 
 //var mongodbUri = 'mongodb+srv://moviedb:movielover123@movielovers-lm3w3.mongodb.net/test?retryWrites=true&w=majority'
 

@@ -12,6 +12,10 @@ const review = require('./routes/review');
 
 var app = express();
 
+if (process.env.NODE_ENV !== 'test') {
+  app.use(logger('dev'));
+}
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

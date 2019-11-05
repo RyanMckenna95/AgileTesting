@@ -3,10 +3,14 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "test": "NODE_ENV=test mocha test/functional/api/moviesTest.js --exit "
+    "test": "set NODE_ENV=test && mocha test/routes/moviesTest.js",
+    "start": "cross-env NODE_ENV=dev PORT=3001 node dist/bin/www",
+    "build": "npm-run-all test clean compile start",
+    "compile": "babel ./ --out-dir dist/ --ignore ./node_modules,./test --copy-files",
+    "clean": "rimraf ./dist && mkdir dist"
   },
   "dependencies": {
+    "@babel/runtime": "^7.6.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
@@ -18,10 +22,19 @@
     "morgan": "~1.9.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.6.3",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/register": "^7.0.0",
     "chai": "^4.0.2",
+    "cross-env": "^6.0.3",
     "jest": "^24.9.0",
     "mocha": "^6.2.0",
     "mongodb-memory-server": "^6.0.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.0",
     "supertest": "^4.0.2"
   }
 }

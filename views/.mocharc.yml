@@ -1,0 +1,6 @@
+file:
+    - test/functional/api/moviesTest.js
+    - test/functional/api/showsTest.js
+require: '@babel/register'
+
+timeout: 8000
