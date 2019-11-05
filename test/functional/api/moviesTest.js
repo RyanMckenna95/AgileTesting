@@ -1,16 +1,14 @@
 const expect = require("chai").expect
-const express = require("express")
 const {MongoMemoryServer} = require("mongodb-memory-server")
 const request = require("supertest")
 const mongoose = require("mongoose")
-const _ = require("lodash")
 const Movie = require("../../../models/movies")
 const after = require("lodash")
 
 
 let server
 let mongod
-let db, validID, validID2 , stockemp, stock
+let db, validID, validID2
 
 describe("Movies", ()=> {
   before(async () => {
@@ -64,10 +62,8 @@ describe("Movies", ()=> {
       await movieNoStock.save()
       movie = await Movie.findOne({title: "Avatar"})
       validID = movie._id
-      stock = movie.stock
       movieNoStock = await Movie.findOne({title: "Green book"})
       validID2 = movieNoStock._id
-      stockemp = movieNoStock.stock
     } catch (error) {
       console.log(error)
     }

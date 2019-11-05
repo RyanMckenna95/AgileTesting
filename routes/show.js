@@ -1,4 +1,4 @@
-let shows = require("../models/shows")
+
 let express = require("express")
 let router = express.Router()
 let mongoose = require("mongoose")
@@ -32,10 +32,10 @@ router.findAllShows =(req, res) => {
 }
 
 
-function getByValue(array, id) {
-  let result  = array.filter(function(obj){return obj.id == id} )
-  return result ? result[0] : null // or undefined
-}
+// function getByValue(array, id) {
+//   let result  = array.filter(function(obj){return obj.id == id} )
+//   return result ? result[0] : null // or undefined
+// }
 
 router.findOneByID = (req, res) => {
 

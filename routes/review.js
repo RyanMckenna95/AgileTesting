@@ -32,10 +32,10 @@ router.findAllReviews =(req, res) => {
 }
 
 
-function getByValue(array, id) {
-  let result  = array.filter(function(obj){return obj.id == id} )
-  return result ? result[0] : null // or undefined
-}
+// function getByValue(array, id) {
+//   let result  = array.filter(function(obj){return obj.id == id} )
+//   return result ? result[0] : null // or undefined
+// }
 
 router.findOneByID = (req, res) => {
 
@@ -49,10 +49,10 @@ router.findOneByID = (req, res) => {
   })
 }
 
-function getByName(array, title) {
-  let result  = array.filter(function(obj){return obj.title == title} )
-  return result ? result[0] : null // or undefined
-}
+// function getByName(array, title) {
+//   let result  = array.filter(function(obj){return obj.title == title} )
+//   return result ? result[0] : null // or undefined
+// }
 
 router.addReviewMovie = (req, res) => {
   res.setHeader("Content-type","application/json")
