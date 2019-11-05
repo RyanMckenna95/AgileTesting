@@ -1,4 +1,4 @@
-let movies = require("../models/movies")
+
 let express = require("express")
 let mongoose = require("mongoose")
 let router = express.Router()
@@ -33,10 +33,10 @@ router.findAllMovies =(req, res) =>{
 
 }
 
-function getByValue(array, id) {
-  let result  = array.filter(function(obj){return obj.id == id} )
-  return result ? result[0] : null // or undefined
-}
+// function getByValue(array, id) {
+//   let result  = array.filter(function(obj){return obj.id == id} )
+//   return result ? result[0] : null // or undefined
+// }
 
 router.findOneByID = (req, res) => {
 
@@ -81,7 +81,7 @@ router.purchaseMovie = (req, res) => {
     else {
 
       stock = movie.stock
-      if (stock = 0) {
+      if (stock === 0) {
         res.json({message: "this Movie is out of stock", errmsg: err})
       } else
         movie.stock -= 1

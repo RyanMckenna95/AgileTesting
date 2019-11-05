@@ -79,7 +79,7 @@ router.purchaseShow = (req, res) => {
     else {
 
       stock = show.stock
-      if (stock = 0) {
+      if (stock === 0) {
         res.json({message: "this Show is out of stock", errmsg: err})
       } else
         show.stock -= 1
