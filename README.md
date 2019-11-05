@@ -55,7 +55,7 @@ deleted if their stock is zero.
 ]
 ~~~
 
-###shows
+### shows
 
 ~~~
 [
@@ -69,7 +69,7 @@ deleted if their stock is zero.
 ]
 ~~~
 
-###reviews
+### reviews
 ~~~
 [
     {
